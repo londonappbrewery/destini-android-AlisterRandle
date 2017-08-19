@@ -34,15 +34,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mStoryTextView.setText(R.string.T3_Story);
+
 
                 if (mStoryIndex == 3) {
                     mStoryTextView.setText(R.string.T6_End);
                     mTopButton.setVisibility(View.GONE);
                     mBottomButton.setVisibility(View.GONE);
-                } else {
+                } else if (mStoryIndex == 1) {
                     mTopButton.setText(R.string.T3_Ans1);
                     mBottomButton.setText(R.string.T3_Ans2);
+                } else {
+                    mStoryTextView.setText(R.string.T3_Story);
                 }
                 mStoryIndex = 3;
             }
